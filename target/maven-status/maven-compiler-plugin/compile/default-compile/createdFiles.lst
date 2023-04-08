@@ -1,0 +1,7 @@
+renaldinumazid\pencatatan\buku\entity\Book.class
+renaldinumazid\pencatatan\buku\App.class
+renaldinumazid\pencatatan\buku\service\BookService.class
+renaldinumazid\pencatatan\buku\service\impl\BookServiceImpl.class
+renaldinumazid\pencatatan\buku\util\DatabaseUtil.class
+renaldinumazid\pencatatan\buku\repository\BookRepository.class
+renaldinumazid\pencatatan\buku\repository\impl\BookRepositoryImpl.class
