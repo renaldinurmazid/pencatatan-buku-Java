@@ -10,7 +10,7 @@ public interface BookService {
     //get by id
     public Book getById(Integer id);
     //update
-    public void update(Integer id,String title,String author,Integer year);
+    public void update(Integer id, String title, String author, Integer year);
     //delete
     public void delete(Integer id);
 }

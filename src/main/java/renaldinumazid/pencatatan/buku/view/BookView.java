@@ -1,7 +1,8 @@
 package renaldinumazid.pencatatan.buku.view;
 
-//import java.util.Scanner;
+import java.util.Scanner;
 import renaldinumazid.pencatatan.buku.util.InputUtil;
+import renaldinumazid.pencatatan.buku.entity.Book;
 import renaldinumazid.pencatatan.buku.service.BookService;
 
 public class BookView {
@@ -38,7 +39,7 @@ public class BookView {
             }else if(input.equals("5")) {
                 deleteData();
             }else {
-                 System.out.println("Option doesn't recognized");
+                 System.out.println("Option Tidak ada dalam pilihan");
             }
         }
     }
@@ -56,18 +57,58 @@ public class BookView {
         bookService.add(title, author, Integer.valueOf(year));
     }
     //update data
-    public void updateData(){
-        
-        System.out.println("========== UPDATE DATA ===========");
-
-        //get data input
-        String title = InputUtil.input("Title");
-        String author = InputUtil.input("Author");
-        String year = InputUtil.input("Year");
-        String id = InputUtil.input("Id");
+    public void updateData() {
+        Scanner scanner = new Scanner(System.in);
     
-        //add data
-        bookService.update(Integer.valueOf(id),title, author, Integer.valueOf(year));
+        System.out.print("Masukan ID Book: ");
+    
+        Integer id = scanner.nextInt();
+
+        Book book = bookService.getById(id);
+    
+        scanner.nextLine(); // Consume newline left-over
+    
+        System.out.print("Enter new title: ");
+    
+        String title = scanner.nextLine();
+    
+        System.out.print("Enter new author: ");
+    
+        String author = scanner.nextLine();
+    
+        System.out.print("Enter new year: ");
+    
+        Integer year = scanner.nextInt();
+    
+        bookService.update(id, title, author, year);
+    
+        System.out.println("Book updated successfully.");
+        // System.out.println("======== UPDATE DATA =========");
+        // System.out.println("------------------------------");
+        // try (Scanner scanner = new Scanner(System.in)) {
+        //     System.out.print("Masukan Book ID to Update: ");
+        //     int id = scanner.nextInt();
+   
+        //     // get book by id
+        //     Book book = bookService.getById(id);
+   
+        //     if (book == null) {
+        //         System.out.println("Book with ID " + id + " Tidak Tersedia");
+        //     } else {
+        //         System.out.print("Masukan Nama Buku: ");
+        //         String title = scanner.next();
+   
+        //         System.out.print("Masukan Nama Penulis: ");
+        //         String author = scanner.next();
+   
+        //         System.out.print("Masukan Tahun Terbit: ");
+        //         int year = scanner.nextInt();
+   
+        //         // update book
+        //         bookService.update(id, title, author, year);
+        //         System.out.println("Book data updated successfully");
+        //     }
+        // }
     }
     //show data
     public void showData(){
