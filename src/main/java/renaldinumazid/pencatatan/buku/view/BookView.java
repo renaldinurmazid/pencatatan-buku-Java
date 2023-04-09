@@ -23,7 +23,7 @@ public class BookView {
             System.out.println("4.Show Data By ID");
             System.out.println("5.Delete Data");
             System.out.println("X.Exit");
-
+            System.out.println("==================================");
             String input = InputUtil.input("Choose >");
         
             if(input.equals("1")) {
@@ -49,9 +49,9 @@ public class BookView {
         System.out.println("========== INSERT DATA ===========");
 
         //get data input
-        String title = InputUtil.input("Title");
-        String author = InputUtil.input("Author");
-        String year = InputUtil.input("Year");
+        String title = InputUtil.input("Masukan Judul Buku");
+        String author = InputUtil.input("Masukan Nama Pengarang");
+        String year = InputUtil.input("Masukan Tahun Terbit");
     
         //add data
         bookService.add(title, author, Integer.valueOf(year));
