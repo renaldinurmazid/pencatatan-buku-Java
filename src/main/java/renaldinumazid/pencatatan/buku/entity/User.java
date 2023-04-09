@@ -1,30 +1,28 @@
 package renaldinumazid.pencatatan.buku.entity;
 
 public class User {
-    private Integer id;
+    private int id;
     private String username;
-    private String name;
     private String password;
-    private Role role;
+    private String name;
+    private String role;
 
-    public enum Role {
-        Admin,
-        User
+    public User() {
     }
 
-    public User(Integer id, String username, String name, String password, Role role) {
+    public User(int id, String username, String password, String name, String role) {
         this.id = id;
         this.username = username;
-        this.name = name;
         this.password = password;
+        this.name = name;
         this.role = role;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -36,14 +34,6 @@ public class User {
         this.username = username;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -52,12 +42,21 @@ public class User {
         this.password = password;
     }
 
-    public Role getRole() {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getRole() {
         return role;
     }
 
-    public void setRole(Role role) {
+    public void setRole(String role) {
         this.role = role;
     }
 }
+
 
