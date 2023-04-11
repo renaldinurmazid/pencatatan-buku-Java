@@ -63,19 +63,6 @@ public class BookServiceImpl implements BookService {
     }
 }
 
-    // public void update(Integer id, String title, String author, Integer year) {
-    //     //initialize
-    //     Book book = new Book(title, author, year);
-
-    //     //update
-    //     bookRepository.update(book);
-
-    //     //return
-    //     System.out.println("Book Update Succesfully : " + book.getTitle());
-
-        
-    // }
-
     @Override
     public void delete(Integer id) {
 

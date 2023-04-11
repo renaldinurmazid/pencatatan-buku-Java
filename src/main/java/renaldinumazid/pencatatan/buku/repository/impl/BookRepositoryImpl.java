@@ -7,15 +7,11 @@
  import java.sql.Statement;
  import java.util.List;
 
-//import javax.management.RuntimeErrorException;
-import javax.sql.DataSource;
+ import javax.sql.DataSource;
 
- ///import com.mysql.cj.xdevapi.Statement;
 
  import java.sql.PreparedStatement;
 
- //import com.mysql.cj.Query;
- //import com.mysql.cj.xdevapi.PreparableStatement;
 
  import renaldinumazid.pencatatan.buku.entity.Book;
  import renaldinumazid.pencatatan.buku.repository.BookRepository;
@@ -137,14 +133,6 @@ public class BookRepositoryImpl implements BookRepository{
             int rowsUpdated = statement.executeUpdate();
 
             return rowsUpdated > 0;
-            // try(ResultSet resultSet = statement.executeQuery()){
-             
-            //     if (resultSet.next()){
-            //         return true;
-            //     }
-
-            //         return false;
-            // }
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -163,12 +151,6 @@ public class BookRepositoryImpl implements BookRepository{
             int rowsDeleted = statement.executeUpdate();
 
             return rowsDeleted > 0;
-            // try(ResultSet resultSet = statement.executeQuery()){
-            //     if(resultSet.next()){
-            //         return true;
-            //     }
-            //     return false;
-            // }
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
